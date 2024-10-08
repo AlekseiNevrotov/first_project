@@ -15,11 +15,11 @@ def add(items, title, amount, expiration_date=None):
     list.append(items[title], {'amount': amount, 'expiration_date': expiration_date })    
     
 goods = {
-    'Пельмени Универсальные': [
+    'Пельмени Цезарь': [
         {'amount': Decimal('0.5'), 'expiration_date': dt.date(2024, 5, 11)},
         {'amount': Decimal('2'), 'expiration_date': dt.date(2024, 5, 12)}
     ],
-    'Вода': [{'amount': Decimal('1.5'), 'expiration_date': None}]
+    'Сок': [{'amount': Decimal('1.5'), 'expiration_date': None}]
 }     
 
 add(goods, 'Апельсины', Decimal('3'), '2024-5-13')
@@ -42,7 +42,7 @@ def add_by_note(items, note):
         add(items, title, Decimal(good_amount), expiration_date=expiration_date)
 
 add_by_note(goods, 'Мясо 4 2024-05-13')
-add_by_note(goods, 'Рыба 88')
+add_by_note(goods, 'Лобстер 8')
 
 def find(items, needle):
     search = []
@@ -100,6 +100,6 @@ def expire(items, in_advance_days=0):
     return find_products   
 
 print(goods)
-print(find(goods, 'ль'))
+print(find(goods, 'сины'))
 print(amount(goods, 'Апельсины'))
 print(expire(goods))
