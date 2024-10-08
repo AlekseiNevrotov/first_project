@@ -42,7 +42,7 @@ def add_by_note(items, note):
         add(items, title, Decimal(good_amount), expiration_date=expiration_date)
 
 add_by_note(goods, 'Мясо 4 2024-05-13')
-add_by_note(goods, 'Лобстер 8')
+add_by_note(goods, 'Лобстер 50')
 
 def find(items, needle):
     search = []
